@@ -200,6 +200,12 @@ void modifyObject() {
     printf("Object %d modified.\n", id);
 }
 
+// ─── Input Helper ─────────────────────────────────────────────────────────────
+void clearInputBuffer() {
+    int c;
+    while ((c = getchar()) != '\n' && c != EOF);
+}
+
 // ─── Main Menu ────────────────────────────────────────────────────────────────
 int main() {
     initCanvas();
@@ -214,7 +220,12 @@ int main() {
         printf("6. Clear Canvas\n");
         printf("0. Exit\n");
         printf("Choice: ");
-        scanf("%d", &choice);
+        if (scanf("%d", &choice) != 1) {
+            printf("Invalid input! Please enter a number.\n");
+            clearInputBuffer();
+            choice = -1;
+            continue;
+        }
         switch (choice) {
             case 1: addObject();    break;
             case 2: deleteObject(); break;

@@ -1,0 +1,30 @@
+name: C Build & Test CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    name: Build & Test (GCC)
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Install build tools
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y build-essential
+
+    - name: Compile Graphics Editor
+      run: |
+        gcc -Wall -Wextra -std=c99 -O2 graphics_editor.c -o graphics_editor -lm
+
+    - name: Compile and Run Shape Tests
+      run: |
+        gcc -Wall -Wextra -std=c99 -O2 tests/test_shapes.c -o test_shapes -lm
+        ./test_shapes

@@ -1,0 +1,24 @@
+# Compiled executables
+*.exe
+*.out
+*.app
+graphics_editor
+test_shapes
+
+# Object files & archives
+*.o
+*.obj
+*.a
+*.so
+*.dylib
+*.dll
+
+# IDE and Editor files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# OS metadata
+.DS_Store
+Thumbs.db
