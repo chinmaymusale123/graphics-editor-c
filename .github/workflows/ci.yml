@@ -28,3 +28,9 @@ jobs:
       run: |
         gcc -Wall -Wextra -std=c99 -O2 tests/test_shapes.c -o test_shapes -lm
         ./test_shapes
+
+    - name: Verify Level 1 C Programs
+      run: |
+        for file in "LEVEL 1 CODES"/*.c; do
+          gcc -fsyntax-only "$file"
+        done

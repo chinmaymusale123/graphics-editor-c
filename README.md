@@ -67,6 +67,18 @@ graphics-editor-c/
 ├── .github/
 │   └── workflows/
 │       └── ci.yml             # Automated GCC build & test workflow
+├── LEVEL 1 CODES/             # Collection of 10 foundational C programs
+│   ├── max_value_array_#1.c
+│   ├── cmp_area_rect_#2.c
+│   ├── Arrayofstruc_recarea_#3.c
+│   ├── flight_search_systems_#4.c
+│   ├── swapping_arrays_#5.c
+│   ├── dynamic_memory_allocation_#6.c
+│   ├── cmp_strings_#7.c
+│   ├── concat_strings_#8.c
+│   ├── reading_writing_file_#9.c
+│   ├── reading_writing_binary_file_#10.c
+│   └── README.md
 ├── tests/
 │   └── test_shapes.c          # Headless automated unit tests for raster algorithms
 ├── .gitignore                 # Binary and IDE ignore rules
